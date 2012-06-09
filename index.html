@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Fortress - A Password Strength Meter</title>
+	<meta name="description" content="Fortress - A Password Strength Meter">
+	<meta name="author" content="Wes Todd">
+	
+	<link rel="stylesheet" href="fortress.css">
+</head>
+
+<body>
+	<header>
+		<h1>Fortress</h1>
+		<h2>A Password Strength Meter</h2>
+	</header>
+	<div id="main" role="main">
+		
+		<form action="/" method="post">
+			
+			<div class="field-wrap password required">
+				<label for="pass">Password</label>
+				<input type="password" name="pass" id="pass" placeholder="Password" />
+			</div>
+			<div class="field-wrap password required">
+				<input type="password" name="confirm_pass" id="confirm_pass" placeholder="Confirm Password" />
+			</div>
+			<div class="field-wrap submit">
+				<input type="submit" value="Sign Up" />
+			</div>
+		
+		</form>
+		
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+
+	<script src="jquery.fortress.js"></script>
+	<script>
+		
+		jQuery(document).ready(function($){
+			
+			$('input[name=pass]').fortress()
+			
+		});
+	</script>
+</body>
+</html>
